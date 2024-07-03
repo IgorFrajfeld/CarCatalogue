@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Car Catalogue</title>
+    <title>Car Specialist Showroom</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -59,6 +59,15 @@
             background-color: #000;
             color: #fff;
         }
+		.logout {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
         .form-container {
             max-width: 600px;
             margin: 40px auto;
@@ -114,13 +123,14 @@
 </head>
 <body>
 <header>
-    <h1>Car Catalogue</h1>
+    <h1>Car Specialist Showroom</h1>
 </header>
 <nav>
     <ul class="Menu">
         <li><a href="Cars.php">All Cars</a></li>
         <li><a href="Insert.php" class="active">Insert Data</a></li>
-        <li><a href="Logout.php">Logout</a></li>
+		<li><a href="Edit.php">Edit Data</a></li>
+        <li><a href="Logout.php" class="logout">Logout</a></li>
     </ul>
 </nav>
 <div class="container">
@@ -144,7 +154,7 @@
     </div>
 </div>
 <footer>
-    <p>Car Catalogue &copy; 2024</p>
+    <p>Car Specialist Showroom &copy; 2024</p>
 </footer>
 </body>
 </html>

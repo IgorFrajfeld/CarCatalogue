@@ -4,6 +4,8 @@ session_start();
 include("Connection.php");
 include("Functions.php");
 
+$error_message = "";
+
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
     //something was posted
@@ -31,10 +33,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             }
         }
         
-        echo "wrong username or password!";
-    }else
-    {
-        echo "wrong username or password!";
+        $error_message = "Wrong username or password!";
+    } else {
+        $error_message = "Wrong username or password!";
     }
 }
 
@@ -124,6 +125,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         .form-container a:hover {
             color: #575757;
         }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
         footer {
             background: #333;
             color: #fff;
@@ -135,7 +141,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 </head>
 <body>
 <header>
-    <h1>Car Catalogue</h1>
+    <h1>Car Specialist Showroom</h1>
 </header>
 <div class="container">
     <div class="form-container">
@@ -146,10 +152,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             <input id="button" type="submit" value="Login"><br>
             <a href="Signup.php">Create an account</a>
         </form>
+        <?php if(!empty($error_message)): ?>
+            <div class="error-message"><?php echo $error_message; ?></div>
+        <?php endif; ?>
     </div>
 </div>
 <footer>
-    <p>Car Catalogue &copy; 2024</p>
+    <p>Car Specialist Showroom &copy; 2024</p>
 </footer>
 </body>
 </html>

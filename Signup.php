@@ -120,7 +120,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 </head>
 <body>
 <header>
-    <h1>Car Catalogue</h1>
+    <h1>Car Specialist Showroom</h1>
 </header>
 <div class="container">
     <div class="form-container">
@@ -135,7 +135,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     </div>
 </div>
 <footer>
-    <p>Car Catalogue &copy; 2024</p>
+    <p>Car Specialist Showroom &copy; 2024</p>
 </footer>
 </body>
 </html>

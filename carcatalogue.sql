@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2024 at 05:16 AM
+-- Generation Time: Jul 03, 2024 at 06:20 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -41,7 +41,7 @@ CREATE TABLE `carcatalogue` (
 --
 
 INSERT INTO `carcatalogue` (`car_id`, `manufacturer`, `model`, `engine`, `fuel_type`, `car_year`) VALUES
-(1, 'Toyota', 'Corolla', '1.8L', 'Gasoline', 2020),
+(1, 'Toyota', 'Corolla', '2.0L', 'Gasoline', 2020),
 (2, 'Honda', 'Civic', '2.0L', 'Gasoline', 2019),
 (3, 'Ford', 'Mustang', '5.0L', 'Gasoline', 2021),
 (4, 'Chevrolet', 'Impala', '3.6L', 'Gasoline', 2018),
@@ -61,7 +61,10 @@ INSERT INTO `carcatalogue` (`car_id`, `manufacturer`, `model`, `engine`, `fuel_t
 (18, 'Chevrolet', 'Malibu', '1.5L', 'Gasoline', 2021),
 (19, 'Ford', 'Escape', '1.5L', 'Gasoline', 2022),
 (20, 'Toyota', 'Camry', '2.5L', 'Gasoline', 2019),
-(21, 'Audi', 'A6', '2.0L', 'Diesel', 2014);
+(21, 'Audi', 'A6', '2.0L', 'Diesel', 2014),
+(22, 'Audi', 'A3', '2.0L', 'Gasoline', 2008),
+(24, '', '', '', '', 0000),
+(25, '', '', '', '', 0000);
 
 --
 -- Indexes for dumped tables
@@ -81,7 +84,7 @@ ALTER TABLE `carcatalogue`
 -- AUTO_INCREMENT for table `carcatalogue`
 --
 ALTER TABLE `carcatalogue`
-  MODIFY `car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

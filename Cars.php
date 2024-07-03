@@ -133,12 +133,13 @@
 </head>
 <body>
 <header>
-    <h1>Car Catalogue</h1>
+    <h1>Car Specialist Showroom</h1>
 </header>
 <nav>
     <ul class="Menu">
         <li><a href="Cars.php" class="active">All Cars</a></li>
         <li><a href="Insert.php">Insert Data</a></li>
+        <li><a href="Edit.php">Edit Data</a></li>
         <li><a href="Logout.php" class="logout">Logout</a></li>
     </ul>
 </nav>
@@ -196,7 +197,7 @@
 </div>
 
 <footer>
-    <p>Car Catalogue &copy; 2024</p>
+    <p>Car Specialist Showroom &copy; 2024</p>
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
