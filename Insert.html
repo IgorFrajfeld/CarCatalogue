@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Car Catalogue</title>
+		<meta charset="utf-8">
+		<style>
+
+			.Menu {
+				overflow: hidden;
+				background-color: transparent;
+				font-family: Verdana, sans-serif;
+				margin: 0;
+			}
+			
+			.Menu {
+				border: 1px solid #dddddd;
+				font-size: 20px;
+				text-align: center;
+				
+				padding: 10px 10px;
+				margin-bottom: 15px;
+			}
+			
+			.Logout {
+				font-family: Verdana, sans-serif;
+				font-size: 25px;
+				text-align: center;
+				color: #FF0000;
+				padding-bottom: 14px;
+			}
+			
+			.Menu a:link , a:visited{
+				 color: Black;
+				  background-color: transparent;
+				  text-decoration: none;
+				border: 1px solid #dddddd;
+				padding: 14px 16px;
+			}
+			
+			.Menu a:hover {
+				background-color: #bdbdbd;
+				color: black;
+				text-decoration: none;
+				border: 1px solid #dddddd;
+				padding: 14px 16px;
+			}
+			
+			.Menu a.active {
+				background-color: black;
+				color: white;
+				text-decoration: none;
+				border: 1px solid #dddddd;
+				padding: 14px 16px;
+			}
+			
+			.Insert {
+			  border: 1px solid #dddddd;
+			  font-family: Verdana, sans-serif;
+			  text-align: center;
+			  padding-top: 15px;
+			}
+			
+			h1 {
+				font-family: Verdana, sans-serif;
+				font-size: 35px;
+				text-align: center;
+			}
+			
+			h3 {
+				font-family: Verdana, sans-serif;
+				font-size: 12px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+	<h1>Car Showcase</h1>
+	<div class="Logout">
+		<a href="Logout.php">Logout</a>
+	</div>
+	<div class="Menu">
+    <a href="Cars.php">All Cars</a>
+    <a href="Insert.html">Insert Data</a>
+	</div>
+	<h3>~ All cars listed below are available to be PURCHASED or FINANCED ~</h3>
+	<h3>~ All cars below have been run through a 255 POINT CHECK to ensure the vehicle has no faults ~</h3>
+	<h3>~ Warranty up to 6 MONTHS is given on all listed vehicles ~</h3>
+      <div class="Insert">	
+        <form action="Add.php" method="post">
+            Car ID:<br/> <input type="text" name="car_id"><br/>
+            Manufacturer:<br/> <input type="text" name="manufacturer"><br/>
+            Model:<br/> <input type="text" name="model"><br/>
+            Engine:<br/> <input type="text" name="engine"><br/>
+            Fuel Type:<br/> <input type="text" name="fuel_type"><br/>
+            Car Year:<br/> <input type="text" name="car_year"><br/>
+            <br/><input type="submit" value="Add">
+          </form>
+		  </div>
+
+</body>
+</html>
