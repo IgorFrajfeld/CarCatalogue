@@ -4,6 +4,8 @@ session_start();
 include("Connection.php");
 include("Functions.php");
 
+$error_message = "";
+
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
     //something was posted
@@ -21,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         header("Location: Cars.php");
         die;
     } else {
-        echo "Please enter some valid information!";
+        $error_message = "Please enter some valid information!";
     }
 }
 ?>
@@ -109,6 +111,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         .form-container a:hover {
             color: #575757;
         }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
         footer {
             background: #333;
             color: #fff;
@@ -129,9 +136,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             <input id="text" type="text" name="user_name" placeholder="Username" autocomplete="username"><br>
             <input id="password" type="password" name="password" placeholder="Password" autocomplete="new-password"><br>
             <input id="button" type="submit" value="Signup"><br>
-            <a href="Cars.php">Click to Login</a><br>
             <a href="Login.php">Return to login</a>
         </form>
+        <?php if(!empty($error_message)): ?>
+            <div class="error-message"><?php echo $error_message; ?></div>
+        <?php endif; ?>
     </div>
 </div>
 <footer>

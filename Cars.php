@@ -128,6 +128,16 @@
             padding: 10px 0;
             margin-top: 30px;
         }
+        .location-info {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .map-description {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 16px;
+            color: #555;
+        }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
@@ -150,6 +160,14 @@
 
     <!-- Leaflet Map -->
     <div id="map"></div>
+    <div class="location-info">
+        <h2>Our Location</h2>
+        <p>Car Specialist Showroom</p>
+        <p>Malinsgate, Telford, TF1 1ZZ</p>
+    </div>
+    <div class="map-description">
+        <p>We are proud to present a diverse selection of high-quality cars available for sale and finance. Visit us at our convenient location to explore our range of meticulously inspected vehicles. Our expert team is here to assist you with any questions and provide a seamless car buying experience.</p>
+    </div>
 
     <!-- Original Content -->
     <div class="SearchBar search-container">    
