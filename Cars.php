@@ -20,6 +20,12 @@
             padding: 10px 10px;
             margin-bottom: 15px;
         }
+        .Logout {
+				font-family: Verdana, sans-serif;
+				font-size: 25px;
+				text-align: center;
+				padding-bottom: 14px;
+		}
         .Menu a:link, a:visited {
             color: Black;
             background-color: transparent;
@@ -51,6 +57,7 @@
             font-size: 12px;
             text-align: center;
         }
+        
         @media screen and (max-width: 600px) {
             .Menu, .Menu a {
                 font-size: 18px;
@@ -100,6 +107,7 @@
 <div class="Menu">
     <a href="Cars.php" class="active">All Cars</a>
     <a href="Insert.html">Insert Data</a>
+    <a href="Logout.php">Logout</a>
 </div>
 <h3>~ All cars listed below are available to be PURCHASED or FINANCED ~</h3>
 <h3>~ All cars below have been run through a 255 POINT CHECK to ensure the vehicle has no faults ~</h3>
