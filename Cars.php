@@ -8,157 +8,196 @@
         body {
             font-family: Verdana, sans-serif;
             margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        .Menu {
+        .container {
+            width: 90%;
+            margin: 0 auto;
             overflow: hidden;
-            background-color: transparent;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            border-bottom: #77AADD 3px solid;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px #777;
         }
         .Menu {
-            border: 1px solid #dddddd;
-            font-size: 20px;
-            text-align: center;
-            padding: 10px 10px;
-            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            background-color: #444;
         }
-        .Logout {
-				font-family: Verdana, sans-serif;
-				font-size: 25px;
-				text-align: center;
-				padding-bottom: 14px;
-		}
-        .Menu a:link, a:visited {
-            color: Black;
-            background-color: transparent;
+        .Menu a {
+            color: #fff;
             text-decoration: none;
-            border: 1px solid #dddddd;
-            padding: 14px 16px;
+            text-transform: uppercase;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
         }
         .Menu a:hover {
-            background-color: #bdbdbd;
-            color: black;
-            text-decoration: none;
-            border: 1px solid #dddddd;
-            padding: 14px 16px;
+            background-color: #575757;
+            color: #fff;
         }
         .Menu a.active {
-            background-color: black;
-            color: white;
-            text-decoration: none;
-            border: 1px solid #dddddd;
-            padding: 14px 16px;
+            background-color: #000;
+            color: #fff;
         }
-        h1 {
-            font-family: Verdana, sans-serif;
-            font-size: 35px;
-            text-align: center;
+        .logout {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
         }
         h3 {
             font-family: Verdana, sans-serif;
-            font-size: 12px;
+            font-size: 14px;
             text-align: center;
-        }
-        
-        @media screen and (max-width: 600px) {
-            .Menu, .Menu a {
-                font-size: 18px;
-                padding: 10px;
-            }
-            h1 {
-                font-size: 28px;
-            }
+            margin-top: 10px;
+            color: #777;
         }
         #map {
             height: 400px;
-            width: calc(100% - 40px);
-            margin: 20px;
+            width: 100%;
+            margin: 20px 0;
         }
         .SearchBar {
             text-align: center;
-            width: 100%;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
-        .search-container {
-            margin-bottom: 20px; /* Added margin between search bar and table */
+        .SearchBar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        .SearchBar input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
         }
         h6 {
             font-family: Verdana, sans-serif;
             font-size: 12px;
             color: #b51010;
             text-align: center;
+            margin-top: 20px;
         }
         table {
             font-family: Verdana, sans-serif;
             border-collapse: collapse;
             width: 100%;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         td, th {
             border: 1px solid #dddddd;
             text-align: left;
-            padding: 8px;
+            padding: 10px;
+        }
+        th {
+            background-color: #f4f4f4;
         }
         tr:nth-child(even) {
-            background-color: #dddddd;
+            background-color: #f9f9f9;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
         }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
-<h1>Car Catalogue</h1>
-<div class="Menu">
-    <a href="Cars.php" class="active">All Cars</a>
-    <a href="Insert.html">Insert Data</a>
-    <a href="Logout.php">Logout</a>
-</div>
-<h3>~ All cars listed below are available to be PURCHASED or FINANCED ~</h3>
-<h3>~ All cars below have been run through a 255 POINT CHECK to ensure the vehicle has no faults ~</h3>
-<h3>~ Warranty up to 6 MONTHS is given on all listed vehicles ~</h3>
+<header>
+    <h1>Car Catalogue</h1>
+</header>
+<nav>
+    <ul class="Menu">
+        <li><a href="Cars.php" class="active">All Cars</a></li>
+        <li><a href="Insert.php">Insert Data</a></li>
+        <li><a href="Logout.php" class="logout">Logout</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <h3>~ Enjoy unparalleled peace of mind with our comprehensive warranty coverage of up to 6 months on all vehicles, guaranteeing a worry-free driving experience. ~</h3>
+    <h3>~ Every vehicle in our inventory has passed a meticulous 255-point inspection, ensuring the highest standards of quality, safety, and performance. ~</h3>
+    <h3>~ Enjoy unparalleled peace of mind with our comprehensive warranty coverage of up to 6 months on all vehicles, guaranteeing a worry-free driving experience. ~</h3>
 
-<!-- Leaflet Map -->
-<div id="map"></div>
+    <!-- Leaflet Map -->
+    <div id="map"></div>
 
-<!-- Original Content -->
-<div class="SearchBar search-container">    
-    <form action="Cars.php" method="post">
-        <input type="text" placeholder="Find your car..." name="searchName">
-        <input type="submit" value="Search">
-    </form>
-</div>
+    <!-- Original Content -->
+    <div class="SearchBar search-container">    
+        <form action="Cars.php" method="post">
+            <input type="text" placeholder="Find your car..." name="searchName" autocomplete="on">
+            <input type="submit" value="Search">
+        </form>
+    </div>
 
-<?php
-// Connect to server/database
-$mysqli = mysqli_connect("localhost","root","","carcatalogue");
-if ($mysqli -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $mysqli->connect_error;
-    exit(); 
-}
-
-// Check if the searchName POST variable is set
-$searchName = isset($_POST['searchName']) ? $_POST['searchName'] : '';
-
-$sql = "SELECT * FROM CarCatalogue WHERE car_id LIKE '%$searchName%'
-    OR manufacturer LIKE '%$searchName%'
-    OR model LIKE '%$searchName%'
-    OR engine LIKE '%$searchName%'
-    OR fuel_type LIKE '%$searchName%'
-    OR car_year LIKE '%$searchName%'";
-
-$result = mysqli_query($mysqli, $sql);
-if(mysqli_num_rows($result)>0){
-    echo "<table><tr><th>ID</th><th>Manufacturer</th><th>Model</th><th>Engine</th><th>Fuel Type</th><th>Year</th></tr>";
-    while ($row=mysqli_fetch_assoc($result)) {
-        echo "<tr><td>"
-        . $row['car_id'] . "</td><td>"
-        . $row['manufacturer'] . "</td><td>"
-        . $row['model'] . "</td><td>"
-        . $row['engine'] . "</td><td>"
-        . $row['fuel_type'] . "</td><td>"
-        . $row['car_year'] . "</td></tr>";
+    <?php
+    // Connect to server/database
+    $mysqli = mysqli_connect("localhost","root","","carcatalogue");
+    if ($mysqli -> connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+        exit(); 
     }
-    echo "</table>";
-} else {
-    echo "<h6 class='text-danger'>No Data Found</h6>";
-}
-?>
+
+    // Check if the searchName POST variable is set
+    $searchName = isset($_POST['searchName']) ? $_POST['searchName'] : '';
+
+    $sql = "SELECT * FROM CarCatalogue WHERE car_id LIKE '%$searchName%'
+        OR manufacturer LIKE '%$searchName%'
+        OR model LIKE '%$searchName%'
+        OR engine LIKE '%$searchName%'
+        OR fuel_type LIKE '%$searchName%'
+        OR car_year LIKE '%$searchName%'";
+
+    $result = mysqli_query($mysqli, $sql);
+    if(mysqli_num_rows($result)>0){
+        echo "<table><tr><th>ID</th><th>Manufacturer</th><th>Model</th><th>Engine</th><th>Fuel Type</th><th>Year</th></tr>";
+        while ($row=mysqli_fetch_assoc($result)) {
+            echo "<tr><td>"
+            . $row['car_id'] . "</td><td>"
+            . $row['manufacturer'] . "</td><td>"
+            . $row['model'] . "</td><td>"
+            . $row['engine'] . "</td><td>"
+            . $row['fuel_type'] . "</td><td>"
+            . $row['car_year'] . "</td></tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "<h6 class='text-danger'>No Data Found</h6>";
+    }
+    ?>
+</div>
+
+<footer>
+    <p>Car Catalogue &copy; 2024</p>
+</footer>
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script>
