@@ -68,12 +68,28 @@
             border-radius: 10px;
             text-align: center;
         }
+        .form-container h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container label {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 5px;
+        }
         .form-container input[type="text"], .form-container input[type="number"] {
             width: calc(100% - 22px);
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            text-align: center;
         }
         .form-container input[type="submit"] {
             padding: 10px 20px;
@@ -109,6 +125,7 @@
 </nav>
 <div class="container">
     <div class="form-container">
+        <h2>Please Add the Car Details Below</h2>
         <form action="Add.php" method="post">
             <label for="car_id">Car ID:</label>
             <input type="text" id="car_id" name="car_id" autocomplete="on"><br/>

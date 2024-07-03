@@ -70,12 +70,23 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             border-radius: 10px;
             text-align: center;
         }
+        .form-container h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .form-container input[type="text"], .form-container input[type="password"] {
             width: calc(100% - 22px);
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            text-align: center;
         }
         .form-container input[type="submit"] {
             padding: 10px 20px;

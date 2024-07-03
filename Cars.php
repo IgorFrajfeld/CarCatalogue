@@ -143,9 +143,9 @@
     </ul>
 </nav>
 <div class="container">
-    <h3>~ Enjoy unparalleled peace of mind with our comprehensive warranty coverage of up to 6 months on all vehicles, guaranteeing a worry-free driving experience. ~</h3>
-    <h3>~ Every vehicle in our inventory has passed a meticulous 255-point inspection, ensuring the highest standards of quality, safety, and performance. ~</h3>
-    <h3>~ Enjoy unparalleled peace of mind with our comprehensive warranty coverage of up to 6 months on all vehicles, guaranteeing a worry-free driving experience. ~</h3>
+    <h3>Enjoy unparalleled peace of mind with our comprehensive warranty coverage of up to 6 months on all vehicles, guaranteeing a worry-free driving experience.</h3>
+    <h3>Every vehicle in our inventory has passed a meticulous 255-point inspection, ensuring the highest standards of quality, safety, and performance.</h3>
+    <h3>Enjoy unparalleled peace of mind with our comprehensive warranty coverage of up to 6 months on all vehicles, guaranteeing a worry-free driving experience.</h3>
 
     <!-- Leaflet Map -->
     <div id="map"></div>
