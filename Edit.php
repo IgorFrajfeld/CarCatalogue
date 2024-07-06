@@ -3,7 +3,6 @@ session_start();
 include("Connection.php");
 include("Functions.php");
 
-// Initialize variables
 $car_id = '';
 $manufacturer = '';
 $model = '';
@@ -15,7 +14,6 @@ $update_status = '';
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['find_car'])) {
     $car_id = $_POST['car_id'];
 
-    // Fetch car details from the database
     $query = "SELECT * FROM CarCatalogue WHERE car_id = '$car_id' LIMIT 1";
     $result = mysqli_query($con, $query);
 
@@ -39,12 +37,28 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['update_car'])) {
     $fuel_type = $_POST['fuel_type'];
     $car_year = $_POST['car_year'];
 
-    // Update car details in the database
     $query = "UPDATE CarCatalogue SET manufacturer = '$manufacturer', model = '$model', engine = '$engine', fuel_type = '$fuel_type', car_year = '$car_year' WHERE car_id = '$car_id'";
     if(mysqli_query($con, $query)) {
         $update_status = "Car details updated successfully!";
     } else {
         $update_status = "Failed to update car details!";
+    }
+}
+
+if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['remove_car'])) {
+    $car_id = $_POST['car_id'];
+
+    $query = "DELETE FROM CarCatalogue WHERE car_id = '$car_id'";
+    if(mysqli_query($con, $query)) {
+        $update_status = "Car removed successfully!";
+        $car_id = '';
+        $manufacturer = '';
+        $model = '';
+        $engine = '';
+        $fuel_type = '';
+        $car_year = '';
+    } else {
+        $update_status = "Failed to remove car!";
     }
 }
 ?>
@@ -211,6 +225,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['update_car'])) {
             <label for="car_year">Car Year:</label>
             <input type="text" id="car_year" name="car_year" value="<?php echo $car_year; ?>" autocomplete="on"><br/>
             <input type="submit" name="update_car" value="Update Car">
+        </form>
+        <form method="post">
+            <input type="hidden" name="car_id" value="<?php echo $car_id; ?>">
+            <br><input type="submit" name="remove_car" value="Remove Car" class="remove-button"></br>
         </form>
         <div class="status"><?php echo $update_status; ?></div>
     </div>

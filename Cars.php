@@ -158,7 +158,6 @@
     <h3>Every vehicle in our inventory has passed a meticulous 255-point inspection, ensuring the highest standards of quality, safety, and performance.</h3>
     <h3>Enjoy unparalleled peace of mind with our comprehensive warranty coverage of up to 6 months on all vehicles, guaranteeing a worry-free driving experience.</h3>
 
-    <!-- Leaflet Map -->
     <div id="map"></div>
     <div class="location-info">
         <h2>Our Location</h2>
@@ -169,7 +168,6 @@
         <p>We are proud to present a diverse selection of high-quality cars available for sale and finance. Visit us at our convenient location to explore our range of meticulously inspected vehicles. Our expert team is here to assist you with any questions and provide a seamless car buying experience.</p>
     </div>
 
-    <!-- Original Content -->
     <div class="SearchBar search-container">    
         <form action="Cars.php" method="post">
             <input type="text" placeholder="Find your car..." name="searchName" autocomplete="on">
@@ -178,14 +176,12 @@
     </div>
 
     <?php
-    // Connect to server/database
     $mysqli = mysqli_connect("localhost","root","","carcatalogue");
     if ($mysqli -> connect_errno) {
         echo "Failed to connect to MySQL: " . $mysqli->connect_error;
         exit(); 
     }
 
-    // Check if the searchName POST variable is set
     $searchName = isset($_POST['searchName']) ? $_POST['searchName'] : '';
 
     $sql = "SELECT * FROM CarCatalogue WHERE car_id LIKE '%$searchName%'
